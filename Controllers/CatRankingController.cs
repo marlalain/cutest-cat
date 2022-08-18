@@ -8,10 +8,8 @@ namespace CutestCat.Controllers;
 [Route("/api/v1/[controller]")]
 public class CatRankingController : ControllerBase {
 	private readonly CatRankingService _cats;
-	private readonly ILogger<CatRankingController> _logger;
 
-	public CatRankingController(ILogger<CatRankingController> logger, CatRankingService cats) {
-		_logger = logger;
+	public CatRankingController(CatRankingService cats) {
 		_cats = cats;
 	}
 
